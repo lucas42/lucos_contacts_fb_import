@@ -29,6 +29,11 @@ for filename in os.listdir('data'):
 						"type":"name",
 						"name": name,
 					}
-				]}
+				],
+				"date_of_birth":{
+					'day': day_of_birth,
+					'month': month_of_birth,
+					'year': year_of_birth,
+				}}
 				resp = requests.post(CONTACTS_URL+'agents/import', headers=LUCOS_HEADERS, allow_redirects=False, json=data)
 				resp.raise_for_status()
