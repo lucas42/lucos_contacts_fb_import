@@ -2,7 +2,7 @@
 import os, json, requests, urllib.parse
 
 CONTACTS_URL = os.environ.get('LUCOS_CONTACTS', "https://contacts.l42.eu/")
-LUCOS_HEADERS={'AUTHORIZATION':"key "+os.environ.get('LUCOS_CONTACTS_API_KEY')}
+LUCOS_HEADERS={'AUTHORIZATION':"key "+os.environ.get('KEY_LUCOS_CONTACTS')}
 
 for filename in os.listdir('data'):
 	with open('data/'+filename) as fp:
