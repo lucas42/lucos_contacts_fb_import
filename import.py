@@ -35,5 +35,5 @@ for filename in os.listdir('data'):
 					'month': month_of_birth,
 					'year': year_of_birth,
 				}}
-				resp = requests.post(CONTACTS_URL+'agents/import', headers=LUCOS_HEADERS, allow_redirects=False, json=data)
+				resp = requests.post(CONTACTS_URL+'people/import', headers=LUCOS_HEADERS, allow_redirects=False, json=data)
 				resp.raise_for_status()
